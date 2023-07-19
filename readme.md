@@ -31,13 +31,24 @@
 
 ### Setup Development Environment
 
-##### Install typescript using Node.js package manager (npm)
+#### Install typescript using Node.js package manager (npm)
 
 - npm install -g typescript
 
 - tsc -v / to see the version of TS.
 
-##### Install typescript plug-in in you IDE.
+- tsc ./app.ts / to compile
+
+#### Install typescript plug-in in you IDE.
+
+<hr>
+
+#### tsconfig.json
+
+- The presence of a tsconfig.json file in a directory indicates that the directory is the root of a TypeScript project.
+- The tsconfig.json file specifies the root files and the compiler options required to compile the project.
+- 'tsc --init' command creates a configuration file called tsconfig.json
+- 'tsc' command will generate .js files for all .ts files.
 
 ### Type Annotation
 

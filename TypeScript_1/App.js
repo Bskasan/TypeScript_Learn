@@ -1,11 +1,12 @@
-var button = document.getElementById("submit");
-var a = document.getElementById("input1");
-var b = document.getElementById("input2");
-var result = document.getElementById("result");
+"use strict";
+const button = document.getElementById("submit");
+const a = document.getElementById("input1");
+const b = document.getElementById("input2");
+const result = document.getElementById("result");
 function add(a, b) {
     return a + b;
 }
-button.addEventListener("click", function () {
-    console.log('clicked');
-    result.innerText = "".concat(add(+a.value, +b.value));
+button.addEventListener("click", () => {
+    console.log("clicked");
+    result.innerText = `${add(+a.value, +b.value)}`;
 });

@@ -32,8 +32,8 @@
 ### Setup Development Environment
 
 - Install typescript using Node.js package manager (npm)
--> npm install -g typescript
--> tsc -v / to see the version of TS.
+- ---- npm install -g typescript
+- ---- tsc -v / to see the version of TS.
 
 
 - Install typescript plug-in in you IDE.

@@ -31,12 +31,13 @@
 
 ### Setup Development Environment
 
-- Install typescript using Node.js package manager (npm)
-- ---- <b>npm install -g typescript</b>
-- ---- tsc -v / to see the version of TS.
+##### Install typescript using Node.js package manager (npm)
 
+- npm install -g typescript
 
-- Install typescript plug-in in you IDE.
+- tsc -v / to see the version of TS.
+
+##### Install typescript plug-in in you IDE.
 
 ### Type Annotation
 

@@ -32,7 +32,7 @@
 ### Setup Development Environment
 
 - Install typescript using Node.js package manager (npm)
-- ---- npm install -g typescript
+- ---- <b>npm install -g typescript</b>
 - ---- tsc -v / to see the version of TS.
 
 

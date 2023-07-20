@@ -62,6 +62,12 @@ let arr2L: readonly number[] = [1, 2, 3, 4, 5];
 
 let myTuple: [number, string];
 myTuple = [2, "hello"];
-myTuple.push('0', 'admin');
+myTuple.push("0", "admin");
 
 console.log(myTuple);
+
+let myArray: [number, string][] = [];
+myArray.push([0, "admin"]);
+myArray.push([1, 'user1']);
+
+console.log(myArray);

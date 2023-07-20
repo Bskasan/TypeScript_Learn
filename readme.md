@@ -62,7 +62,7 @@
 - noImplicitAny : Enable error reporting for expressions and declarations with implied 'any' type.
 - strictNullChecks : When type checking, take into account 'null' and 'undefined'.
 
-### Type Annotation
+### Type Annotation and Types in TypeScript
 
 - TypeScript is a typed language. We need to specify the type of variables, function parameters, and object properties.
 - Type annotation is not mandatory. Compiler will check the types of variable and avoid errors when dealing with the data types.
@@ -98,7 +98,6 @@ let list : Array<number> = [1, 2, 3, 4];
 Data Type - Tuples
 
 - Tuple types allow you to express an array with a fixed number of elements whose types are known, but need not to be the same.
-
 - For example, you may want to represent a value as a pair of a string and a number;
 
 ```javascript
@@ -112,7 +111,23 @@ x = ["hello", 10]; // OK
 x = [10, "hello"]; // Error
 ```
 
-### Types in TypeScript
+<hr>
+
+Data Type - Enum
+
+- A helpful addition to the standart set of data types from JavaScript is the enum. An enum is a way of giving more friendly names to sets of numeric values.
+- By default, enums begin numbering their members starting at 0. You can change this by manually setting tha value that may contain both string and numeric values.
+
+```javascript
+enum Color {
+    Red,
+    Green,
+    Blue,
+}
+
+let selectedColor : Color = Color.Green;
+console.log(selectedColor) // Output: 1
+```
 
 ### Types Assertations
 

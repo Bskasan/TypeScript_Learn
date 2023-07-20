@@ -99,13 +99,24 @@ let user2: Player = Player.Warrior;
 //! --------------------------------------------------------
 
 enum Names {
-  'Bekir' = "BSK",
-  'Jason' = "JW",
-  'Micheal' = "Jordan",
-  'Betul' = 0,
-  'Mahmut',
-
+  "Bekir" = "BSK",
+  "Jason" = "JW",
+  "Micheal" = "Jordan",
+  "Betul" = 0,
+  "Mahmut",
 }
 
 console.log(Names.Jason);
 console.log(Names.Mahmut);
+
+//! -----------------REAL LIFE SAMPLE ENUM------------------
+
+enum StatusCodes {
+  NotFound = 404,
+  Success = 200,
+  Accepted = 202,
+  BadRequest = 400,
+}
+
+const request: StatusCodes = StatusCodes.Success;
+console.log(request); //200

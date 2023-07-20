@@ -68,7 +68,7 @@
 - Type annotation is not mandatory. Compiler will check the types of variable and avoid errors when dealing with the data types.
 - We annotate a variable by using a colon (:) followed by its type.
 
-```javascript
+```typescript
 
 // Example;
 
@@ -100,7 +100,7 @@ Data Type - Tuples
 - Tuple types allow you to express an array with a fixed number of elements whose types are known, but need not to be the same.
 - For example, you may want to represent a value as a pair of a string and a number;
 
-```javascript
+```typescript
 // Declare a tuple type
 let x: [string, number];
 
@@ -118,7 +118,7 @@ Data Type - Enum
 - A helpful addition to the standart set of data types from JavaScript is the enum. An enum is a way of giving more friendly names to sets of numeric values.
 - By default, enums begin numbering their members starting at 0. You can change this by manually setting tha value that may contain both string and numeric values.
 
-```javascript
+```typescript
 enum Color {
     Red,
     Green,
@@ -127,6 +127,20 @@ enum Color {
 
 let selectedColor : Color = Color.Green;
 console.log(selectedColor) // Output: 1
+```
+
+<hr>
+
+Data Type - unknown
+
+- We may need to describe the type of variables that we do not know when we are writing an application.
+- These values may come from dynamic content - e.g. from the user - or we may want to intentionally accept all values in our API.
+- In these cases, we want to provide a type that tells the compiler and future readers that this variable could be anything, so we give it the unknown type.
+
+```typescript
+    let notSure: unknown = 4;
+
+    notSure = "maybe a string instead";
 ```
 
 ### Types Assertations

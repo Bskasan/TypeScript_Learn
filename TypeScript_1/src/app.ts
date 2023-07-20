@@ -41,3 +41,12 @@ function multiply(num1: number, num2: number) {
 }
 
 multiply(ad, bc);
+
+//! --------------------------------------------------------
+
+let arr: number[] = [1, 2, 3];
+arr.push(44);
+
+//! --------------------------------------------------------
+
+let str: Array<string> = ['a', 'b'];

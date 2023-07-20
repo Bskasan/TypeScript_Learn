@@ -86,6 +86,7 @@ let decimal : number = 7;
 // Array is a collection of values. Array types can be written in one of two ways.
 // In thi first, you use the type of the elements followed by [] to denote an array of that element type;
 
+// Recommended way, when you use html, React.
 let list : number[] = [1, 2, 3];
 
 // The second way uses a generic array type, Array<elemType>:

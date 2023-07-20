@@ -10,4 +10,14 @@ button.addEventListener("click", () => {
     console.log("clicked");
     result.innerText = `${add(+a.value, +b.value)}`;
 });
+
 let addArrow = (a, b) => a * b;
+
+let x = 5;
+
+let ad = 5;
+let bc = 10;
+function multiply(num1, num2) {
+    return num1 + num2;
+}
+multiply(ad, bc);

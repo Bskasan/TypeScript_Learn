@@ -12,9 +12,9 @@ button.addEventListener("click", () => {
   result.innerText = `${add(+a.value, +b.value)}`;
 });
 
-let addArrow = (a:number, b:number ) => a * b;
+let addArrow = (a: number, b: number) => a * b;
 
-let x : number = 5;
+let x: number = 5;
 
 //! --------------------------------------------------------
 // let aa;
@@ -33,11 +33,11 @@ let x : number = 5;
 // //? Avoid using any in TypeScript.
 
 //! --------------------------------------------------------
+let ad: number = 5;
+let bc: number = 10;
 
+function multiply(num1: number, num2: number) {
+  return num1 + num2;
+}
 
-
-
-
-
-
-
+multiply(ad, bc);

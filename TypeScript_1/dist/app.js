@@ -91,3 +91,16 @@ console.log(request); //200
 // let anyVar: any = notSure;
 // let anyVar2: any = 2;
 // numVar = anyVar2;
+//! ---------------- VOID ---------------------
+// ? it has to return as number.
+function sum(n1, n2) {
+    console.log(n1 + n2);
+    return n1 + n2;
+}
+// ? it does not have to return something like any other object oriented programming languages.
+function writeFullName(firstName, lastName) {
+    console.log(`${firstName} ${lastName}`);
+}
+let resultSum = sum(3, 5);
+console.log(resultSum);
+writeFullName("Bekir", "Kasan");

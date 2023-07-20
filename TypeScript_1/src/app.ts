@@ -146,3 +146,11 @@ function sum(n1: number, n2: number): number {
 function writeFullName(firstName: string, lastName: string): void {
   console.log(`${firstName} ${lastName}`);
 }
+
+let resultSum: number = sum(3, 5);
+console.log(resultSum);
+
+writeFullName("Bekir", "Kasan");
+
+//! --------------------------------------------------------
+

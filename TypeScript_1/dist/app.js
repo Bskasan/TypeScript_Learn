@@ -22,3 +22,7 @@ let arr = [1, 2, 3];
 arr.push(44);
 let str = ["a", "b"];
 let arr2L = [1, 2, 3, 4, 5];
+let myTuple;
+myTuple = [2, "hello"];
+myTuple.push('0', 'admin');
+console.log(myTuple);

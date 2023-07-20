@@ -56,3 +56,12 @@ let str: Array<string> = ["a", "b"];
 
 let arr2L: readonly number[] = [1, 2, 3, 4, 5];
 // ? We can not add new element, but we can override them by writing with new elements
+
+//! --------------------------------------------------------
+//* Tuples
+
+let myTuple: [number, string];
+myTuple = [2, "hello"];
+myTuple.push('0', 'admin');
+
+console.log(myTuple);

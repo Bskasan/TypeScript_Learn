@@ -45,8 +45,14 @@ multiply(ad, bc);
 //! --------------------------------------------------------
 
 let arr: number[] = [1, 2, 3];
+// ? arr,push('a'); // Error
 arr.push(44);
 
 //! --------------------------------------------------------
 
-let str: Array<string> = ['a', 'b'];
+let str: Array<string> = ["a", "b"];
+
+//! --------------------------------------------------------
+
+let arr2L: readonly number[] = [1, 2, 3, 4, 5];
+// ? We can not add new element, but we can override them by writing with new elements

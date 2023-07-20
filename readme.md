@@ -95,6 +95,23 @@ let list : Array<number> = [1, 2, 3, 4];
 
 ```
 
+Data Type - Tuples
+
+- Tuple types allow you to express an array with a fixed number of elements whose types are known, but need not to be the same.
+
+- For example, you may want to represent a value as a pair of a string and a number;
+
+```javascript
+// Declare a tuple type
+let x: [string, number];
+
+// Initialize it 
+x = ["hello", 10]; // OK
+
+// Initialize it incorrectly
+x = [10, "hello"];
+```
+
 ### Types in TypeScript
 
 ### Types Assertations

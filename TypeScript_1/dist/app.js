@@ -20,4 +20,5 @@ function multiply(num1, num2) {
 multiply(ad, bc);
 let arr = [1, 2, 3];
 arr.push(44);
-let str = ['a', 'b'];
+let str = ["a", "b"];
+let arr2L = [1, 2, 3, 4, 5];

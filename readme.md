@@ -64,6 +64,17 @@
 
 ### Type Annotation
 
+- TypeScript is a typed language. We need to specify the type of variables, function parameters, and object properties.
+- Type annotation is not mandatory. Compiler will check the types of variable and avoid errors when dealing with the data types.
+- We annotate a variable by using a colon (:) followed by its type.
+
+```
+// Example;
+
+var message : string = "Hello World";
+
+```
+
 ### Types in TypeScript
 
 ### Types Assertations

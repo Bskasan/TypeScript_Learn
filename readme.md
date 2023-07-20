@@ -160,6 +160,7 @@ Data Type - never
 
 - Typescript introduced a new type never, which indicates the values that will never occur.
 - The never type is used when you are sure that something is never going to occur. For example, you write a function which will not return to its end point or always throws an exception.
+- if you want more detail,<a href="https://www.typescriptlang.org/docs/handbook/basic-types.html#:~:text=The%20never%20type%20represents%20the,that%20can%20never%20be%20true.">click here!</a>
 
 ```typescript
 // Function returning never must not have a reachable end point
@@ -167,6 +168,7 @@ function error(message: string): never {
   throw new Error(message);
 }
 ```
+
 <hr>
 
 ### Types Assertations

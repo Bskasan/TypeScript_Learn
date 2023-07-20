@@ -50,6 +50,8 @@
 - 'tsc --init' command creates a configuration file called tsconfig.json
 - 'tsc' command will generate .js files for all .ts files.
 
+NOT: noEmitOnError = true - means that if there is an error, don't give me filename.js as output 
+
 ### Type Annotation
 
 ### Types in TypeScript

@@ -62,3 +62,13 @@ currentUser = Role.Admin;
 console.log(currentUser);
 let user1 = 2 /* Player.Magician */;
 let user2 = 1 /* Player.Warrior */;
+var Names;
+(function (Names) {
+    Names["Bekir"] = "BSK";
+    Names["Jason"] = "JW";
+    Names["Micheal"] = "Jordan";
+    Names[Names["Betul"] = 0] = "Betul";
+    Names[Names["Mahmut"] = 1] = "Mahmut";
+})(Names || (Names = {}));
+console.log(Names.Jason);
+console.log(Names.Mahmut);

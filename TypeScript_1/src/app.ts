@@ -84,6 +84,8 @@ console.log(currentUser);
 currentUser = Role.Admin;
 console.log(currentUser);
 
+//! --------------------------------------------------------
+
 //* When you use const keyword, JS side is more understandable.
 const enum Player {
   Rogue,
@@ -93,3 +95,17 @@ const enum Player {
 
 let user1: Player = Player.Magician;
 let user2: Player = Player.Warrior;
+
+//! --------------------------------------------------------
+
+enum Names {
+  'Bekir' = "BSK",
+  'Jason' = "JW",
+  'Micheal' = "Jordan",
+  'Betul' = 0,
+  'Mahmut',
+
+}
+
+console.log(Names.Jason);
+console.log(Names.Mahmut);

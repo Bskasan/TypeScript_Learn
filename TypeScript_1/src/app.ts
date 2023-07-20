@@ -120,3 +120,19 @@ enum StatusCodes {
 
 const request: StatusCodes = StatusCodes.Success;
 console.log(request); //200
+
+//! -------------------- UNKNOWN ------------------------
+
+// let notSure: unknown = 4;
+// notSure = "Hello";
+// notSure = 100;
+
+// let numVar: number = notSure as number;
+// let anyVar: any = notSure;
+
+// let anyVar2: any = 2;
+
+// numVar = anyVar2;
+
+//! --------------------------------------------------------
+

@@ -62,6 +62,7 @@ currentUser = Role.Admin;
 console.log(currentUser);
 let user1 = 2 /* Player.Magician */;
 let user2 = 1 /* Player.Warrior */;
+//! --------------------------------------------------------
 var Names;
 (function (Names) {
     Names["Bekir"] = "BSK";
@@ -72,3 +73,21 @@ var Names;
 })(Names || (Names = {}));
 console.log(Names.Jason);
 console.log(Names.Mahmut);
+//! -----------------REAL LIFE SAMPLE ENUM------------------
+var StatusCodes;
+(function (StatusCodes) {
+    StatusCodes[StatusCodes["NotFound"] = 404] = "NotFound";
+    StatusCodes[StatusCodes["Success"] = 200] = "Success";
+    StatusCodes[StatusCodes["Accepted"] = 202] = "Accepted";
+    StatusCodes[StatusCodes["BadRequest"] = 400] = "BadRequest";
+})(StatusCodes || (StatusCodes = {}));
+const request = StatusCodes.Success;
+console.log(request); //200
+//! -------------------- UNKNOWN ------------------------
+// let notSure: unknown = 4;
+// notSure = "Hello";
+// notSure = 100;
+// let numVar: number = notSure as number;
+// let anyVar: any = notSure;
+// let anyVar2: any = 2;
+// numVar = anyVar2;

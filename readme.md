@@ -69,17 +69,16 @@
 - We annotate a variable by using a colon (:) followed by its type.
 
 ```typescript
-
 // Example;
 
-// String 
-var message : string = "Hello World";
+// String
+var message: string = "Hello World";
 
 // Boolean
-let isDone : boolean = false;
+let isDone: boolean = false;
 
 // Number
-let decimal : number = 7;
+let decimal: number = 7;
 
 // Array - Data Types
 
@@ -87,12 +86,11 @@ let decimal : number = 7;
 // In thi first, you use the type of the elements followed by [] to denote an array of that element type;
 
 // Recommended way, when you use html, React.
-let list : number[] = [1, 2, 3];
+let list: number[] = [1, 2, 3];
 
 // The second way uses a generic array type, Array<elemType>:
 
-let list : Array<number> = [1, 2, 3, 4];
-
+let list: Array<number> = [1, 2, 3, 4];
 ```
 
 Data Type - Tuples
@@ -104,7 +102,7 @@ Data Type - Tuples
 // Declare a tuple type
 let x: [string, number];
 
-// Initialize it 
+// Initialize it
 x = ["hello", 10]; // OK
 
 // Initialize it incorrectly
@@ -120,13 +118,13 @@ Data Type - Enum
 
 ```typescript
 enum Color {
-    Red,
-    Green,
-    Blue,
+  Red,
+  Green,
+  Blue,
 }
 
-let selectedColor : Color = Color.Green;
-console.log(selectedColor) // Output: 1
+let selectedColor: Color = Color.Green;
+console.log(selectedColor); // Output: 1
 ```
 
 <hr>
@@ -138,9 +136,22 @@ Data Type - unknown
 - In these cases, we want to provide a type that tells the compiler and future readers that this variable could be anything, so we give it the unknown type.
 
 ```typescript
-    let notSure: unknown = 4;
+let notSure: unknown = 4;
 
-    notSure = "maybe a string instead";
+notSure = "maybe a string instead";
+```
+
+<hr>
+
+Data Type - void
+
+- void is a little like the opposite of any: the absence of having any type at all.
+- You may commonly see this as the return type of functions that do not return a value
+
+```typescript
+function warnUser(): void {
+  console.log("This is a warning message!!! - You used void here!");
+}
 ```
 
 ### Types Assertations

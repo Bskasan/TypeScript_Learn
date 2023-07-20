@@ -68,6 +68,28 @@ console.log(myTuple);
 
 let myArray: [number, string][] = [];
 myArray.push([0, "admin"]);
-myArray.push([1, 'user1']);
+myArray.push([1, "user1"]);
 
 console.log(myArray);
+
+// ! ========== ENUM -----------------
+enum Role {
+  User,
+  Admin = 10,
+}
+
+let currentUser: Role = Role.User;
+console.log(currentUser);
+
+currentUser = Role.Admin;
+console.log(currentUser);
+
+//* When you use const keyword, JS side is more understandable.
+const enum Player {
+  Rogue,
+  Warrior,
+  Magician,
+}
+
+let user1: Player = Player.Magician;
+let user2: Player = Player.Warrior;

@@ -134,5 +134,15 @@ console.log(request); //200
 
 // numVar = anyVar2;
 
-//! --------------------------------------------------------
+//! ---------------- VOID ---------------------
 
+// ? it has to return as number.
+function sum(n1: number, n2: number): number {
+  console.log(n1 + n2);
+  return n1 + n2;
+}
+
+// ? it does not have to return something like any other object oriented programming languages.
+function writeFullName(firstName: string, lastName: string): void {
+  console.log(`${firstName} ${lastName}`);
+}

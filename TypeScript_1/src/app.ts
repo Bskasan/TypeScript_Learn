@@ -11,3 +11,5 @@ button.addEventListener("click", () => {
   console.log("clicked");
   result.innerText = `${add(+a.value, +b.value)}`;
 });
+
+let addArrow = (a:number, b:number ) => a * b;

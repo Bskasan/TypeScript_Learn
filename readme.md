@@ -52,6 +52,16 @@
 
 NOT: noEmitOnError = true - means that if there is an error, don't give me filename.js as output 
 
+- allowJs : Allow JavaSript files to be compiled. Default value is false.
+- alwaysStrict : Parse in strict mode and emit "use strict" for each source file. Default value is false.
+- target : Specify ECMAScript target version.
+- outDir : The location in which the transpiled files should be kept.
+- noEmitOnError : Disable emitting files if any type checking errors are reported.
+- noUnusedParameters : Raise an error when a function parameter isn't read.
+- removeComments : Disable emitting comments.
+- noImplicitAny : Enable error reporting for expressions and declarations with implied 'any' type.
+- strictNullChecks : When type checking, take into account 'null' and 'undefined'.
+
 ### Type Annotation
 
 ### Types in TypeScript

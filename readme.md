@@ -68,7 +68,8 @@
 - Type annotation is not mandatory. Compiler will check the types of variable and avoid errors when dealing with the data types.
 - We annotate a variable by using a colon (:) followed by its type.
 
-```
+```javascript
+
 // Example;
 
 // String 
@@ -90,8 +91,6 @@ let list : number[] = [1, 2, 3];
 // The second way uses a generic array type, Array<elemType>:
 
 let list : Array<number> = [1, 2, 3, 4];
-
-
 
 ```
 

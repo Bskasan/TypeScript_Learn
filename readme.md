@@ -179,7 +179,26 @@ Data Type - union
 let code: string | number;
 code = 123;
 code = "ABC";
-code = false // Compiler Error
+code = false; // Compiler Error
+```
+
+### Type Aliases
+
+- It's important to create dynamic and reusable code. Using TypeScript aliases will help you to accomplish DRY (Don't Repeat Yourself! ) principle.
+- We have to create our type before we start using it. We define the typle alias with type keyword.
+
+```typescript
+type Point = {
+  x: number;
+  y: number;
+}; // Point is a type now and we can use it.
+
+function printCoord (pt: Point) {
+  console.log("The coordinate's x value is " + pt.x);
+  console.log("The coordinate's y value is " + pt.y);
+}
+
+printCoord ( {x: 100, y: 100} );
 ```
 
 ### Types Assertations

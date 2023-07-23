@@ -178,11 +178,9 @@ console.log(error("New Error"));
 //     }
 // }
 
-
 //Type aliasses
 
-// type Nums = number | string 
-
+// type Nums = number | string
 
 // let xc: Nums = false;
 // let y: Nums = '0'
@@ -190,14 +188,13 @@ console.log(error("New Error"));
 //     console.log(n1+n2)
 // }
 
-
 //String Literals
 
 // type car = 'BMW' | 'Audi'
 
-// let car1: car = 'BMW' 
-// let car2: car = 'Audi' 
-// let car3: car = 'Mercedes' 
+// let car1: car = 'BMW'
+// let car2: car = 'Audi'
+// let car3: car = 'Mercedes'
 
 // Intersection
 
@@ -213,14 +210,14 @@ console.log(error("New Error"));
 //     getID(){
 //         console.log(this.id)
 //     }
-    
+
 // }
 
 // type Book = {
 //     book_id: number;
 //     book_name: string;
 //   }
-    
+
 //   type Author = {
 //     Author_Id: number;
 //     Author_name: string;
@@ -240,8 +237,8 @@ console.log(error("New Error"));
 // let score: unknown = '350';
 
 // console.log(score.split(''))
-// console.log((<string>score).split('')) 
-// console.log((score as string).split('')) 
+// console.log((<string>score).split(''))
+// console.log((score as string).split(''))
 
 // console.log((score as number));
 
@@ -255,7 +252,6 @@ console.log(error("New Error"));
 // selamla('Merhaba','sercan')
 // selamla('Merhaba')
 // selamla('Merhaba','sercan', 'yılmaz')
-
 
 // function overloading
 
@@ -271,14 +267,21 @@ console.log(error("New Error"));
 
 // Rest Parameters
 // function add(num: number, ...numbers:number[]){
-//     let total = num; 
+//     let total = num;
 
 //     numbers.forEach(number=> total+= number)
 //     console.log(total);
 // }
 
-
 // add(1,2);
 // add(1,2,3,4)
 // add(100, 200, 3, 5, 6, 7, 8, 9)
 // add(1);
+
+// ! ----------- TYPE ALIASES ---------------//
+
+type Nums = number | string;
+
+function addNew(n1: Nums, n2: Nums) {
+  console.log(`value 1 is ${n1} and value 2 is ${n2}`);
+}

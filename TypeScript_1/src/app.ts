@@ -333,3 +333,11 @@ let object1: intersected_type = {
   authorID: 1892,
   authorName: "James Clear",
 };
+
+// ! -------------- TYPE ASSERTION -------------- //
+
+let score: unknown = "350";
+
+// console.log(score.split("")); // Unknown type.
+console.log((<string>score).split(""));
+console.log((score as string).split(''));

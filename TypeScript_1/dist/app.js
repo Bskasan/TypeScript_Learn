@@ -110,89 +110,29 @@ function error(message) {
 }
 error("New Error");
 console.log(error("New Error"));
-//! ------------------ UNION ----------------------
-// let uVar: string | number = 0
-// uVar = '0'
-// uVar = true // error
-// //type narrowing
-// function checkNumber(n: (string | number)):string{
-//     n.
-//     if (typeof n === 'number'){
-//         n.
-//     }else {
-//         n.
-//     }
-// }
-//Type aliasses
-// type Nums = number | string 
-// let xc: Nums = false;
-// let y: Nums = '0'
-// function add(n1: Nums, n2: Nums){
-//     console.log(n1+n2)
-// }
-//String Literals
-// type car = 'BMW' | 'Audi'
-// let car1: car = 'BMW' 
-// let car2: car = 'Audi' 
-// let car3: car = 'Mercedes' 
-// Intersection
-//object
-// const employee :{
-//     eName: string;
-//     id?:number; //? opsiyonel yapar
-//     getID():void
-// } = {
-//     eName : 'Mark',
-//     id:1,
-//     getID(){
-//         console.log(this.id)
-//     }
-// }
-// type Book = {
-//     book_id: number;
-//     book_name: string;
-//   }
-//   type Author = {
-//     Author_Id: number;
-//     Author_name: string;
-//   }
-//   type intersected_type = Book & Author;
-//   let obj1: intersected_type = {
-//     book_id: 1234,
-//     book_name: "Lord of the Rings",
-//     Author_Id: 1892,
-//     Author_name: "J. R. R. Tolkien",
-//   };
-// Type Asertions
-// let score: unknown = '350';
-// console.log(score.split(''))
-// console.log((<string>score).split('')) 
-// console.log((score as string).split('')) 
-// console.log((score as number));
-//functions
-// function selamla (greet: string, name?:string ):string{
-//     if(!name) name = 'user'
-//     return `${greet+' '+name}`
-// }
-// selamla('Merhaba','sercan')
-// selamla('Merhaba')
-// selamla('Merhaba','sercan', 'yılmaz')
-// function overloading
-// function add (a:string, b:string):string;
-// function add (a:number, b:number):number;
-// function add (a:any, b:any):any{
-//     return a+b
-// }
-// console.log(add('Hello ', "Mark"))
-// console.log(add(4, 2))
-// console.log(add(4, 'string'))
-// Rest Parameters
-// function add(num: number, ...numbers:number[]){
-//     let total = num; 
-//     numbers.forEach(number=> total+= number)
-//     console.log(total);
-// }
-// add(1,2);
-// add(1,2,3,4)
-// add(100, 200, 3, 5, 6, 7, 8, 9)
-// add(1);
+function addNew(n1, n2) {
+    console.log(`value 1 is ${n1} and value 2 is ${n2}`);
+}
+let pet1 = "cat";
+let pet2 = "bird";
+// let gator: pet = "horse": // ERROR
+// ! ----------- INTERSECTION ---------------//
+// ? How to Create an Object in TypeScript
+// const car: { type: string; model: string; year: number } = {
+//   type: "Toyota",
+//   model: "Corolla",
+//   year: 2009,
+// };
+const employee = {
+    empName: "Micheal",
+    id: 1,
+    getID() {
+        console.log(this.id);
+    },
+};
+let object1 = {
+    bookID: 1234,
+    bookName: "Atomic Habits",
+    authorID: 1892,
+    authorName: "James Clear",
+};

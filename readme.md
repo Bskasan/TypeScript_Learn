@@ -239,6 +239,19 @@ const elevatedUser : SuperUser = {
 };
 ```
 
-### Types Assertations
+### Types Assertions
+
+- Type assertion is a technique that informs the compiler about type of a variable.
+- Type aseertion is similar to typecasting but it doesn't reconstruct code.
+- You can use type assertion to specify a value type and tell the compiler not to deduce it.
+- When we want to change a variable from one type to another such as any to number etc, we use Type assertion.
+
+```typescript
+let someValue: unknown = "this is a string";
+console.log(someValue.length); // Object is of type 'unknown'
+
+console.log((<string>someValue).length); // 16
+console.log((someValue as string).length); // 16
+```
 
 ### Functions

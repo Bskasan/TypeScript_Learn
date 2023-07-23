@@ -288,10 +288,48 @@ function addNew(n1: Nums, n2: Nums) {
 
 // ! ----------- STRING LITERAL ---------------//
 
-type pet = 'cat' | 'bird';
+type pet = "cat" | "bird";
 
-let pet1: pet = 'cat';
-let pet2: pet = 'bird';
+let pet1: pet = "cat";
+let pet2: pet = "bird";
 // let gator: pet = "horse": // ERROR
 
 // ! ----------- INTERSECTION ---------------//
+
+// ? How to Create an Object in TypeScript
+// const car: { type: string; model: string; year: number } = {
+//   type: "Toyota",
+//   model: "Corolla",
+//   year: 2009,
+// };
+
+const employee: {
+  empName: string;
+  id?: number; //* ? means that it is optinal.
+  getID(): void;
+} = {
+  empName: "Micheal",
+  id: 1,
+  getID() {
+    console.log(this.id);
+  },
+};
+
+type Book = {
+  bookID: number;
+  bookName: string;
+};
+
+type Author = {
+  authorID: number;
+  authorName: string;
+};
+
+type intersected_type = Book & Author;
+
+let object1: intersected_type = {
+  bookID: 1234,
+  bookName: "Atomic Habits",
+  authorID: 1892,
+  authorName: "James Clear",
+};

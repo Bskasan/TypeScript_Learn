@@ -214,6 +214,31 @@ let pet2: pet = 'dog';
 let gator: pet = "horse": // ERROR
 ```
 
+### Intersection
+
+- Despite their similarities, intersection and union types are used in very different ways.
+- An intersection type is a type that merges several kind into one. This allows you to combine many types to create a single type with all of the properties that you require.
+- An object of this type will have members from all of the types given. The '&' operator is used to create the intersection type.
+
+```typescript
+type User = {
+  id: number;
+  name: string;
+};
+
+type Admin = {
+  privileges: string[];
+};
+
+type SuperUser = User & Admin;
+
+const elevatedUser : SuperUser = {
+  id: 1,
+  name: 'Beko',
+  privileges: ['start-database'],
+};
+```
+
 ### Types Assertations
 
 ### Functions

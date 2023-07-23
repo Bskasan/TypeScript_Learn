@@ -285,3 +285,13 @@ type Nums = number | string;
 function addNew(n1: Nums, n2: Nums) {
   console.log(`value 1 is ${n1} and value 2 is ${n2}`);
 }
+
+// ! ----------- STRING LITERAL ---------------//
+
+type pet = 'cat' | 'bird';
+
+let pet1: pet = 'cat';
+let pet2: pet = 'bird';
+// let gator: pet = "horse": // ERROR
+
+// ! ----------- INTERSECTION ---------------//

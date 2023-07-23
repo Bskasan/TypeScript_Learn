@@ -201,6 +201,19 @@ function printCoord (pt: Point) {
 printCoord ( {x: 100, y: 100} );
 ```
 
+String Literals
+
+- String literals allow us to use a string as a type
+- String literals become even more powerful when used with union types. Union types are used to define values that can be of more than one type. With union types, the | character is used to separate the different possible types.
+
+```typescript
+type pet = 'cat' | 'bird';
+
+let pet1: pet = 'cat';
+let pet2: pet = 'dog';
+let gator: pet = "horse": // ERROR
+```
+
 ### Types Assertations
 
 ### Functions

@@ -136,3 +136,9 @@ let object1 = {
     authorID: 1892,
     authorName: "James Clear",
 };
+// ! -------------- TYPE ASSERTION -------------- //
+let score = "350";
+// console.log(score.split("")); // Unknown type.
+console.log(score.split(""));
+console.log(score.split(''));
+// ! ---------------- FUNCTIONS -------------- //

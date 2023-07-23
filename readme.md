@@ -279,7 +279,7 @@ function GetUserInfo(firstname: string, lastname: string, country?: string) : st
 }
 ```
 
-Funtions - Overloading
+Functions - Overloading
 
 - Typescript provides the concept of function overloading. You can have multiple functions with the same name but different parameter types and return type. However, the number of parameters should be the same.
 
@@ -294,4 +294,18 @@ funtion add(a: any, b: any) : any {
 
 add("Hello", "Steve"); // returns Hello Steve
 add(20, 40); // returns 30
+```
+
+Functions - Rest Parameters
+
+- Typescript has rest parameters to accommodate n number of parameters easily.
+- When the number of parameters is not known or can vary, we can use rest parameters. In JavaScript, this is achieved with the "arguments" variable. In typescript, we can use the rest parameter denoted by ellipsis. Rest parameters must come last in the function definition, otherwise the Typescript compiler wiil give an error.
+
+```typescript
+function Greet(greeting: string, ...names: string[]){
+  return greeting + " " + names.join(", ") + "!";
+}
+
+Greet("Hello", "Steve", "Bill"); // returns "Hello Steve, Bill!"
+Greet("Hello"); // returns "Hello !"
 ```

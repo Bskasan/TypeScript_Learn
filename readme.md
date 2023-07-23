@@ -193,12 +193,12 @@ type Point = {
   y: number;
 }; // Point is a type now and we can use it.
 
-function printCoord (pt: Point) {
+function printCoord(pt: Point) {
   console.log("The coordinate's x value is " + pt.x);
   console.log("The coordinate's y value is " + pt.y);
 }
 
-printCoord ( {x: 100, y: 100} );
+printCoord({ x: 100, y: 100 });
 ```
 
 String Literals
@@ -232,10 +232,10 @@ type Admin = {
 
 type SuperUser = User & Admin;
 
-const elevatedUser : SuperUser = {
+const elevatedUser: SuperUser = {
   id: 1,
-  name: 'Beko',
-  privileges: ['start-database'],
+  name: "Beko",
+  privileges: ["start-database"],
 };
 ```
 
@@ -255,3 +255,43 @@ console.log((someValue as string).length); // 16
 ```
 
 ### Functions
+
+- Functions should return a type, and also function parameters should have types.
+- The compiler expects a function to receive the exact number and type of arguments as defined in the function signature. For example, if a function expects 3 parameters, the compiler checks whether 3 parameters exists with exact type or not.
+
+```typescript
+function Greet(greeting: string, name: string): string {
+  return greeting + " " + name + "!";
+}
+
+Greet("Hello", "Steve"); // OK, returns 'Hello Steve!'
+Greet("Hi"); // Compiler Error: Expected 2 arguments, but got 1.
+Greet("Hi", "Bill", "Gates"); // Compiler Error: Expected 2 arguments, but got 3.
+```
+
+- In some cases, some of function parameters may be optional.
+- Use the ? symbol after the parameter name to make a function argument optional.
+- All optional parameters must follow required parameters and should be at the end.
+
+```typescript
+function GetUserInfo(firstname: string, lastname: string, country?: string) : string {
+  return 'Hello' firstname + ' ' + lastname + 'and your age is ' + age + '.';
+}
+```
+
+Funtions - Overloading
+
+- Typescript provides the concept of function overloading. You can have multiple functions with the same name but different parameter types and return type. However, the number of parameters should be the same.
+
+```typescript
+function add(a: string, b:string) : string;
+
+funtion add(a:number, b:number) : number;
+
+funtion add(a: any, b: any) : any {
+  return a + b;
+}
+
+add("Hello", "Steve"); // returns Hello Steve
+add(20, 40); // returns 30
+```

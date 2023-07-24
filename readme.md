@@ -309,3 +309,42 @@ function Greet(greeting: string, ...names: string[]){
 Greet("Hello", "Steve", "Bill"); // returns "Hello Steve, Bill!"
 Greet("Hello"); // returns "Hello !"
 ```
+
+### Classes
+
+- Classes are the fundamental entities used to create reusable components.
+- Functionalities are passed down to classes.
+- Objects are created from classes.
+
+- A class can include the following;
+  - Constructor
+  - Properties
+  - Methods
+
+- For example; If we say that we have Dog class, tail, number of legs, color, etc. will be the properties and Bark, Run, Jump and Sleep will be methods.
+
+- An object of the class can be created using the new keyword.
+- While instantiating a new object, the class constructor is called with the values passed.
+
+```typescript
+class Employee {
+  empCode: number;
+  empName: string;
+
+  constructor ( code: number, name: string)
+  {
+    this.empCode = code;
+    this.empName = name;
+  }
+}
+
+// Instantiating a New Object with new keyword
+let emp = new Employee(100, "John");
+```
+
+
+
+
+
+
+

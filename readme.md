@@ -380,4 +380,38 @@ Abstract Classes
 - Abstract classes are mainly for defining structure of class, where there are no implementation code. Therefore, they cannot be instantiated.
 - An abstract class typically includes one or more abstract methods or property declarations. **_The child class must define all the abstract methods._**
 - We can think as abstract methods / properties are a placeholder that will be defined when it is inherited.
-- For more information: <a href="https://www.typescriptlang.org/docs/handbook/classes.html#:~:text=Abstract%20classes%20are%20base%20classes,methods%20within%20an%20abstract%20class."> Click here! </a>
+- Child of an abstract class must call super() in the constructor.
+- Person ( Example below ) is an abstract class has one property and two methods. displayCode() method is an abstract method and so must be defined in the derived class.
+- The Employee class should define implementation code for the displayCode() method.
+- The Employee class should implement all the abstract methods of the Person class, otherwise the compiler will give an error.
+
+For more information: <a href="https://www.typescriptlang.org/docs/handbook/classes.html#:~:text=Abstract%20classes%20are%20base%20classes,methods%20within%20an%20abstract%20class."> Click here! </a>
+
+```typescript
+abstract class Person {
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  displayName(): void {
+    console.log(this.name);
+  }
+
+  abstract displayCode(): void;
+}
+
+class Employee extends Person {
+  empCode: number;
+
+  constructor(code: number, name: string) {
+    super(name);
+    this.empCode = code;
+  }
+
+  displayCode(): void {
+    console.log(this.empCode);
+  }
+}
+```

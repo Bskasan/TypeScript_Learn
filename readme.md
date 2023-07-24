@@ -302,7 +302,7 @@ Functions - Rest Parameters
 - When the number of parameters is not known or can vary, we can use rest parameters. In JavaScript, this is achieved with the "arguments" variable. In typescript, we can use the rest parameter denoted by ellipsis. Rest parameters must come last in the function definition, otherwise the Typescript compiler wiil give an error.
 
 ```typescript
-function Greet(greeting: string, ...names: string[]){
+function Greet(greeting: string, ...names: string[]) {
   return greeting + " " + names.join(", ") + "!";
 }
 
@@ -317,6 +317,7 @@ Greet("Hello"); // returns "Hello !"
 - Objects are created from classes.
 
 - A class can include the following;
+
   - Constructor
   - Properties
   - Methods
@@ -331,8 +332,7 @@ class Employee {
   empCode: number;
   empName: string;
 
-  constructor ( code: number, name: string)
-  {
+  constructor(code: number, name: string) {
     this.empCode = code;
     this.empName = name;
   }
@@ -342,9 +342,34 @@ class Employee {
 let emp = new Employee(100, "John");
 ```
 
+Classes - Inheritance
 
+- Classes can inherit using the keyword 'extends'.
+- The employee class now includes all the members of the person class.
+- The constructor of the employee class is using a special keyword super, and initialises its own properties.
+- We must call super() method first before assigning values to properties in the constructor of the child class.
 
+```typescript
+// Parent Class
+class Person {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+}
 
+// Child & Derived Class 
+class Employee extends Person {
+  empCode;
+  number;
+  constructor(code: number, name: string) {
+    // Inherit from parent class named Person
+    super(name);
+    this.empCode = code;
+  }
 
-
-
+  displayName(): void {
+    console.log(this.name, this.empCode);
+  }
+}
+```

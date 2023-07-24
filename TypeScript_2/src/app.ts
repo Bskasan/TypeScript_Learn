@@ -13,3 +13,6 @@ class Player {
     this.playerRole = role;
   }
 }
+
+let player1 = new Player("Ronin", 120, "Rogue");
+let player2 = new Player("Berceste", 79, "Warrior");

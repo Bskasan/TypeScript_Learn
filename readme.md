@@ -93,7 +93,7 @@ let list: number[] = [1, 2, 3];
 let list: Array<number> = [1, 2, 3, 4];
 ```
 
-Data Type - Tuples
+**Data Type - Tuples**
 
 - Tuple types allow you to express an array with a fixed number of elements whose types are known, but need not to be the same.
 - For example, you may want to represent a value as a pair of a string and a number;
@@ -111,7 +111,7 @@ x = [10, "hello"]; // Error
 
 <hr>
 
-Data Type - Enum
+**Data Type - Enum**
 
 - A helpful addition to the standart set of data types from JavaScript is the enum. An enum is a way of giving more friendly names to sets of numeric values.
 - By default, enums begin numbering their members starting at 0. You can change this by manually setting tha value that may contain both string and numeric values.
@@ -129,7 +129,7 @@ console.log(selectedColor); // Output: 1
 
 <hr>
 
-Data Type - unknown
+**Data Type - unknown**
 
 - We may need to describe the type of variables that we do not know when we are writing an application.
 - These values may come from dynamic content - e.g. from the user - or we may want to intentionally accept all values in our API.
@@ -143,7 +143,7 @@ notSure = "maybe a string instead";
 
 <hr>
 
-Data Type - void
+**Data Type - void**
 
 - void is a little like the opposite of any: the absence of having any type at all.
 - You may commonly see this as the return type of functions that do not return a value
@@ -156,7 +156,7 @@ function warnUser(): void {
 
 <hr>
 
-Data Type - never
+**Data Type - never**
 
 - Typescript introduced a new type never, which indicates the values that will never occur.
 - The never type is used when you are sure that something is never going to occur. For example, you write a function which will not return to its end point or always throws an exception.
@@ -171,7 +171,7 @@ function error(message: string): never {
 
 <hr>
 
-Data Type - union
+**Data Type - union**
 
 - Typescript allows us to use more than one data type for a variable or a function parameter. This is called union type.
 
@@ -201,7 +201,7 @@ function printCoord(pt: Point) {
 printCoord({ x: 100, y: 100 });
 ```
 
-String Literals
+**String Literals**
 
 - String literals allow us to use a string as a type
 - String literals become even more powerful when used with union types. Union types are used to define values that can be of more than one type. With union types, the | character is used to separate the different possible types.
@@ -279,7 +279,7 @@ function GetUserInfo(firstname: string, lastname: string, country?: string) : st
 }
 ```
 
-Functions - Overloading
+**Functions - Overloading**
 
 - Typescript provides the concept of function overloading. You can have multiple functions with the same name but different parameter types and return type. However, the number of parameters should be the same.
 
@@ -296,7 +296,7 @@ add("Hello", "Steve"); // returns Hello Steve
 add(20, 40); // returns 30
 ```
 
-Functions - Rest Parameters
+**Functions - Rest Parameters**
 
 - Typescript has rest parameters to accommodate n number of parameters easily.
 - When the number of parameters is not known or can vary, we can use rest parameters. In JavaScript, this is achieved with the "arguments" variable. In typescript, we can use the rest parameter denoted by ellipsis. Rest parameters must come last in the function definition, otherwise the Typescript compiler wiil give an error.
@@ -342,7 +342,7 @@ class Employee {
 let emp = new Employee(100, "John");
 ```
 
-Classes - Inheritance
+**Classes - Inheritance**
 
 - Classes can inherit using the keyword 'extends'.
 - The employee class now includes all the members of the person class.
@@ -374,7 +374,7 @@ class Employee extends Person {
 }
 ```
 
-Abstract Classes
+**Abstract Classes**
 
 - Typescript allows us to define an abstract class using keyword abstract.
 - Abstract classes are mainly for defining structure of class, where there are no implementation code. Therefore, they cannot be instantiated.

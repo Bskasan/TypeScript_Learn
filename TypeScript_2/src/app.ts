@@ -16,3 +16,40 @@ class Player {
 
 let player1 = new Player("Ronin", 120, "Rogue");
 let player2 = new Player("Berceste", 79, "Warrior");
+
+// Abstract Classes
+
+abstract class Vehicle {
+  year: number;
+  color: string;
+
+  constructor(year: number, color: string) {
+    this.year = year;
+    this.color = color;
+  }
+
+  startEngine(): void {
+    console.log("Engine Started");
+  }
+
+  abstract stopEngine(): void;
+}
+
+class Car extends Vehicle {
+  model: string;
+  numOfDoors: number;
+
+  constructor(year: number, color: string, model: string, numOfDoors: number) {
+    super(year, color);
+    this.model = model;
+    this.numOfDoors = numOfDoors;
+  }
+
+  stopEngine(): void {
+    console.log("Car stopped!");
+  }
+}
+
+const car = new Car(1983, "red", "mercedes", 4);
+car.startEngine();
+car.stopEngine();

@@ -373,3 +373,10 @@ class Employee extends Person {
   }
 }
 ```
+
+Abstract Classes
+
+- Typescript allows us to define an abstract class using keyword abstract.
+- Abstract classes are mainly for defining structure of class, where there are no implementation code. Therefore, they cannot be instantiated.
+- An abstract class typically includes one or more abstract methods or property declarations. *** The child class must  define all the abstract methods. ***
+- We can think as abstract methods / properties are a placeholder that will be defined when it is inherited.

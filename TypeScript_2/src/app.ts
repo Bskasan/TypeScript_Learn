@@ -53,3 +53,31 @@ class Car extends Vehicle {
 const car = new Car(1983, "red", "mercedes", 4);
 car.startEngine();
 car.stopEngine();
+
+// ! ------------------------------------------------ //
+class Person {
+  public name: string;
+  private age: number;
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+
+  getAge() {
+    console.log(this.age);
+  }
+
+  setAge(newAge: number) {
+    if (newAge > 0 && newAge <= 100) {
+      this.age = newAge;
+    } else {
+      throw new Error("Invalid Age");
+    }
+  }
+}
+
+const Barry = new Person("Barry", 25);
+
+Barry.getAge();
+Barry.setAge(26);
+Barry.getAge();

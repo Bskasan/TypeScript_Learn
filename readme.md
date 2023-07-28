@@ -431,7 +431,6 @@ class Employee extends Person {
 Private
 
 - The private access modifier ensures that class members are visible only to that class and are not accessible outside the containing class.
-
 - When we create an object emp and try to access the emp.empCode member, it will be give an error.
 
 ```typescript
@@ -447,4 +446,37 @@ class Employee {
 
 let emp = new Employee(100, "John");
 console.log(emp.empCode); // Compiler Error
+```
+
+Protected
+
+- Child class can't access private methods/ properties.
+- However, child class can access protected members.
+- In the example below, DevelopmentEmployee class can't access id in the parent class. However, it can reach public and protected properties.
+- Outside the class, we can reach empName, but we can't reach department.
+
+```typescript
+class Employee {
+  public empName: string;
+  protected empCode: number;
+  private id = Math.random();
+  
+  constructor(empCode: number, name: string){
+    this.empCode = empCode;
+    this.empName = name;
+  }
+}
+
+class DevelopmentEmployee extends Employee {
+  private department: string;
+
+  constructor(code: number, name: string, dep: string){
+    super(code, name);
+    this.department = dep;
+    // ! this.id = 100; // Compiler Error. Private to parent.
+  }
+}
+
+let emp = new DevelopmentEmployee(100, "John", "Frontend");
+console.log(emp.department) // => Compiler Error
 ```

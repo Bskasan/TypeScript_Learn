@@ -415,3 +415,15 @@ class Employee extends Person {
   }
 }
 ```
+
+**Class Data Modifiers**
+
+- In object-oriented programming, the concept of 'encapsulation' is used to make class members public or private i.e.
+- A class can control the visibility of its data members. This is done using access modifiers.
+- There are three types of access modifiers in typescript;
+
+*1. public*
+*2. private*
+*3. protected*
+
+- By default, all members of a class in Typescript are public. All the public members can be accessed anywhere without any restrictions.

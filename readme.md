@@ -422,8 +422,29 @@ class Employee extends Person {
 - A class can control the visibility of its data members. This is done using access modifiers.
 - There are three types of access modifiers in typescript;
 
-*1. public* <br>
-*2. private* <br>
-*3. protected* <br>
+    *1. public* <br>
+    *2. private* <br>
+    *3. protected* <br>
 
 - By default, all members of a class in Typescript are public. All the public members can be accessed anywhere without any restrictions.
+
+Private
+
+- The private access modifier ensures that class members are visible only to that class and are not accessible outside the containing class.
+
+- When we create an object emp and try to access the emp.empCode member, it will be give an error.
+
+```typescript
+class Employee {
+  private empCode: number;
+  public empName: string;
+
+  constructor ( empCode: number, name: string ) {
+    this.empCode = empCode;
+    this.empName = name;
+  }
+}
+
+let emp = new Employee(100, "John");
+console.log(emp.empCode); // Compiler Error
+```

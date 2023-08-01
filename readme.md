@@ -506,3 +506,23 @@ console.log(emp.department) // => Compiler Error
   emp.empCode = 20 // Compiler Error
 ```
 
+***Static Modifier***
+
+- The static members of a class are accessed using the class name and dot notation, wihtout creating an object.
+- The static members can be defined by using the keyword static.
+- Circle class below includes a static property and static method.
+- We can call these methods adn properties directly from the class.
+
+```typescript
+class Circle {
+  static pi: number = 3.14;
+
+  static calcArea(radius: number){
+    return this.pi * radius * radius;
+  }
+}
+
+Circle.pi: // returns 3.14
+Circle.calcArea(5) // return 78.5
+```
+

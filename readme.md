@@ -428,7 +428,7 @@ class Employee extends Person {
 
 - By default, all members of a class in Typescript are public. All the public members can be accessed anywhere without any restrictions.
 
-Private
+***Private***
 
 - The private access modifier ensures that class members are visible only to that class and are not accessible outside the containing class.
 - When we create an object emp and try to access the emp.empCode member, it will be give an error.
@@ -448,7 +448,7 @@ let emp = new Employee(100, "John");
 console.log(emp.empCode); // Compiler Error
 ```
 
-Protected
+***Protected***
 
 - Child class can't access private methods/ properties.
 - However, child class can access protected members.
@@ -480,3 +480,28 @@ class DevelopmentEmployee extends Employee {
 let emp = new DevelopmentEmployee(100, "John", "Frontend");
 console.log(emp.department) // => Compiler Error
 ```
+
+***Readonly Modifier***
+
+- In addition to the access modifiers, typescript provides two more keywords: read-only and static.
+- Prefix read-only is used to make a property as read-only.
+- Read-only members can be accessed outside the class, but their value cannot be changed after initialization.
+- If we try to change tha value of empcode after the object has been initialized, we get compiler error.
+
+```typescript
+  class Employee {
+    empName: string;
+    readonly empCode: number;
+
+    constructor(empCode: number, name: string){
+      this.empCode = empCode;
+      this.empName = name;
+    }
+
+  }
+
+  // ----------------------------------
+  let emp = new Employee(100, "John");
+  emp.empCode = 20 // Compiler Error
+```
+

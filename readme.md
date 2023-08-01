@@ -246,6 +246,7 @@ const elevatedUser: SuperUser = {
 - You can use type assertion to specify a value type and tell the compiler not to deduce it.
 - When we want to change a variable from one type to another such as any to number etc, we use Type assertion.
 
+
 ```typescript
 let someValue: unknown = "this is a string";
 console.log(someValue.length); // Object is of type 'unknown'

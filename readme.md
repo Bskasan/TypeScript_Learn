@@ -526,3 +526,36 @@ Circle.pi: // returns 3.14
 Circle.calcArea(5) // return 78.5
 ```
 
+**Interfaces**
+
+- Interface is a structure that defines the contract. It defines the syntax for classes to follow. Classes must follow the derived interface structure.
+- The typescript compiler does not convert interface to JavaScript. Just for type checking. "duck typing" or "structural subtyping".
+- An interface is defined with the keyword interface.
+- It can only include properties and method declaration.
+- No implementation
+- We use interfaces to define the shape of objects and classes.
+
+```typescript
+interface Calendar {
+  events: string[];
+  addEvent(event: string): void;
+}
+
+class ClassCalendar implements Calendar {
+  events: string[];
+  constructor() {
+    this.events = [];
+  }
+
+  addEvent(event: string): void {
+    this.events.push(event);
+  }
+}
+```
+
+***Interfaces vs Type Aliases***
+
+- Interfaces and type aliases can be used interchangeably. Both can be used to describe the shape of an object.
+- Interface can only be used for object and classes.
+
+

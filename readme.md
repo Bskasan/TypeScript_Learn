@@ -561,4 +561,25 @@ class ClassCalendar implements Calendar {
 
 <hr>
 
+- Interface can only contain declaration of properties and methods, no value or no implementation details are allowed.
+- A class can implement more than one interface, but can only implement one super class.
 
+```typescript
+interface Color {
+  color: {r: number, g: number, b: number}
+}
+
+interface Shape {
+  area: number;
+}
+
+class Square implements Color, Shape {
+  color: {r: number, g: number, b: number}
+  area: number;
+
+  constructor(c: {r: number, g: number, b: number}, a: number){
+    this.color = c;
+    this.area = a;
+  }
+}
+```

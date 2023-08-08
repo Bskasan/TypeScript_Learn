@@ -552,10 +552,13 @@ class ClassCalendar implements Calendar {
   }
 }
 ```
+<hr>
 
 ***Interfaces vs Type Aliases***
 
 - Interfaces and type aliases can be used interchangeably. Both can be used to describe the shape of an object.
 - Interface can only be used for object and classes.
+
+<hr>
 
 

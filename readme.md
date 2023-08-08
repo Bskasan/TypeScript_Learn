@@ -583,3 +583,25 @@ class Square implements Color, Shape {
   }
 }
 ```
+
+***Interfaces as Function Type***
+
+- We can define function type using interface, to assign a function variable, typescript can enforce specific function.
+
+```typescript
+interface NumKey {
+  (key: number, value: string): void
+}
+
+function addKeyVal (k: number, v: string): void {
+  console.log("adding key value", k, v);
+}
+
+function update(index: number, newVal: string): void {
+  console.log("Updating key value...", index, newVal);
+}
+
+let kvp: NumKey = addKeyVal;
+kvp(1, 'John');
+kyp = update;
+```

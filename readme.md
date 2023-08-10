@@ -605,3 +605,59 @@ let kvp: NumKey = addKeyVal;
 kvp(1, 'John');
 kyp = update;
 ```
+
+```typescript
+interface Sum {
+  (num1: number, num2: number): number;
+}
+
+function add(n1: number, n2: number): number {
+  return n1 + n2;
+}
+
+function conC(n1: string, n2: string): string {
+  return n1 + n2;
+}
+
+let arithmeticAdd: Sum = add;
+
+console.log(arithmeticAdd(2, 5));
+
+let conCt: Sum = conC; // Error, interface is number number, but conC is string string.
+```
+**Generics**
+
+- Typescript Generics is a tool which provides a way to create reusable components ( functions, interfaces, and classes).
+- Generics in typescript is almost similar to C# generics.
+- A generic type has one or more generic type parameters in angle brackets. e.g: <T> ot <T,U> using uppercase single letter is a convention.
+- When using generic types, we should supply arguments for generic type parameters or let the compiler infer them (if possible).
+
+```typescript
+//------------- Problem ------------------//
+funtion getArray(items: any[]): any[] {
+  return new Array().concat(items);
+}
+
+let numArr = getArray([1, 2, 3]);
+let strArr = getArray(["Micheal", "Jane"]);
+
+numArr.push(4); // OK
+strArr.push('Jake'); // OK
+
+numArr.push('Tim'); // OK
+strArr.push(5); // OK
+
+console.log(numArr); // [1, 2, 3, 4, 'Tim'] -> we can add string here.
+console.log(strArr); // ['Micheal', 'Jane', 'Jake', 5] -> we can add number here.
+
+//------------- Solution ------------------//
+funtion getArray<T>(items: T[]): T[] {
+  return new Array<T>().concat(items);
+}
+
+numArr.push(4); // OK
+strArr.push('Jake'); // OK
+
+numArr.push('Tim'); // Compiler Error
+strArr.push(5); // Compiler Error
+```

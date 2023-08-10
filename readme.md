@@ -660,4 +660,25 @@ strArr.push('Jake'); // OK
 
 numArr.push('Tim'); // Compiler Error
 strArr.push(5); // Compiler Error
+
+//----------- Generic Interface ---------//
+interface Result<T> {
+  data: T | null;
+}
+
+//----------- Generic Function ---------//
+function wrapInArr<T>(value: T) {
+  return [value]
+}
+
+let arr = wrapInArr(1);
+
+//----------- Generic Classes ---------//
+class KeyValuePair<K, V> {
+  constructor(public key: K, public value: V) {}
+}
+
+let kvp = new KeyValuePair<number, string>(1, 'a');
+let shorter = new KeyValuePair(1, 'a');
 ```
+
